@@ -1,13 +1,20 @@
-package com.healthapp.engine;
+package com.healthapp.engine.objects;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-import java.math.BigInteger;
-import java.sql.Timestamp;
 import java.util.Date;
 
 @Entity
-class FoodDiary {
+@Table(name = "food_diary")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+public class FoodDiary {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,5 +39,5 @@ class FoodDiary {
     int foodQty;
 
     @Column(name = "created_on")
-    String createdOn;
+    Date createdOn;
 }

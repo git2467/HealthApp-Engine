@@ -1,5 +1,6 @@
 package com.healthapp.engine;
 
+import com.healthapp.engine.objects.FoodDiary;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,8 +12,8 @@ class FoodDiaryService {
     @Autowired
     FoodDiaryRepository foodDiaryRepository;
 
-    List<FoodDiary> getFoodDiaryById(String keycloakId) {
-        return foodDiaryRepository.findByKeyCloakId(keycloakId);
+    public List<FoodDiary> getFoodDiaryById(String keycloakId) {
+        return foodDiaryRepository.findFoodDiaryById(keycloakId);
     }
 
 }
