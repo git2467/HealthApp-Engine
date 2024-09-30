@@ -2,7 +2,7 @@
 --    id SERIAL PRIMARY KEY,
 --    keycloak_id varchar(255),
 --    fdc_id varchar(255),
---    food_date date, 
+--    food_date date,
 --    food_meal varchar(255),
 --    food_name varchar(255),
 --    food_qty int,

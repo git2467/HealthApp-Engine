@@ -13,5 +13,4 @@ interface FoodDiaryRepository extends JpaRepository<FoodDiary, Long> {
     public List<FoodDiary> findFoodDiaryById(
             @Param("keycloakId") String keycloakId
     );
-
 }
