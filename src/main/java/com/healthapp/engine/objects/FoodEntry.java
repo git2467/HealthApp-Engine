@@ -14,7 +14,7 @@ import java.util.Date;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class FoodDiary {
+public class FoodEntry {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -35,8 +35,14 @@ public class FoodDiary {
     @Column(name = "food_name")
     String foodName;
 
-    @Column(name = "food_qty")
-    int foodQty;
+    @Column(name = "food_serving")
+    int foodServing;
+
+    @Column(name = "food_serving_size_description")
+    String foodServingSizeDescription;
+
+    @Column(name = "food_serving_size_value")
+    double foodServingSizeValue;
 
     @Column(name = "created_on")
     Date createdOn;
