@@ -25,5 +25,8 @@ COPY keycloak.conf $KEYCLOAK_HOME/conf/keycloak.conf
 # Make the entrypoint script executable
 RUN chmod +x /app/entrypoint.sh
 
+# Debug: Verify the file existence and permissions
+RUN ls -l /app/entrypoint.sh
+
 # Set the entry point to the script
 ENTRYPOINT ["/app/entrypoint.sh"]
