@@ -16,6 +16,8 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
+                .cors()
+                .and()
                 .authorizeHttpRequests(authorize -> authorize
                         .requestMatchers("/hello").permitAll() // Allow public access to /hello
                         .anyRequest().authenticated() // Require authentication for other requests
