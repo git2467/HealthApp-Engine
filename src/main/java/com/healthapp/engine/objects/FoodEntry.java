@@ -35,14 +35,17 @@ public class FoodEntry {
     @Column(name = "food_name")
     String foodName;
 
-    @Column(name = "food_serving")
-    int foodServing;
+    @Column(name = "food_serving_qty")
+    int foodServingQty;
 
-    @Column(name = "food_serving_size_description")
-    String foodServingSizeDescription;
+    @Column(name = "food_serving_size_unit_value")
+    double foodServingSizeUnitValue;
 
-    @Column(name = "food_serving_size_value")
-    double foodServingSizeValue;
+    @Column(name = "food_serving_size_unit")
+    String foodServingSizeUnit;
+
+    @Column(name = "food_serving_size_gram_value")
+    double foodServingSizeGramValue;
 
     @Column(name = "created_on")
     Date createdOn;
