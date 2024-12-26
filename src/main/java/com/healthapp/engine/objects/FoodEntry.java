@@ -36,7 +36,7 @@ public class FoodEntry {
     String foodName;
 
     @Column(name = "food_serving_qty")
-    int foodServingQty;
+    double foodServingQty;
 
     @Column(name = "food_serving_size_unit_value")
     double foodServingSizeUnitValue;
