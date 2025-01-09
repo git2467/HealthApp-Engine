@@ -1,5 +1,5 @@
 ## Introduction
-This work is is done by both [Adrian Lee Jun Wei (git2467)](https://github.com/git2467) and [Ang Guang En (guangen96)](https://github.com/guangen96).
+This work is done by both [Adrian Lee Jun Wei (git2467)](https://github.com/git2467) and [Ang Guang En (guangen96)](https://github.com/guangen96).
 
 This is a Spring Boot backend project for our Health App that: 
 - stores users' food entries in PostgreSQL database, using Spring Data JPA, RESTful APIs
