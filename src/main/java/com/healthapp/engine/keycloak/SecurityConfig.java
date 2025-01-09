@@ -16,15 +16,12 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-                .cors()
-                .and()
-                .authorizeHttpRequests(authorize -> authorize
-                        .requestMatchers("/hello").permitAll() // Allow public access to /hello
-                        .anyRequest().authenticated() // Require authentication for other requests
-                )
-                .oauth2ResourceServer(oauth2 -> oauth2
-                        .jwt(jwt -> jwt.jwtAuthenticationConverter(jwtAuthenticationConverter()))
-                );
+            .cors()
+            .and()
+            .authorizeHttpRequests(authorize -> authorize.anyRequest().authenticated())
+            .oauth2ResourceServer(oauth2 -> oauth2
+                    .jwt(jwt -> jwt.jwtAuthenticationConverter(jwtAuthenticationConverter()))
+            );
 
         return http.build();
     }
