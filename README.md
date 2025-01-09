@@ -7,7 +7,7 @@ This is a Spring Boot backend project for our Health App that:
 
 The frontend project can be found [here](https://github.com/git2467/HealthApp-UI).
 
-## RESTful APIs
+## 1. RESTful APIs
 `@RestController` - handles HTTP requests, responses
 
 `@GetMapping`("/entry/id") - get existing food entry by id
@@ -19,7 +19,7 @@ The frontend project can be found [here](https://github.com/git2467/HealthApp-UI
 `@DeleteMapping`("/entry/delete") - delete existing food entry
 
 
-## Spring Data JPA
+## 2. Spring Data JPA
 `@Service` - contain business logic for data access
 
 `@Entity`, `@Table`, `@Column` - map Java classes to database tables
@@ -37,10 +37,10 @@ public List<FoodEntry> findFoodEntryByDate(
 `@Getter`, `@Setter` - Lombok annotations that auto generates common methods
 
 
-## PostgreSQL database
+## 3. PostgreSQL database
 ![](src/main/resources/readme/fooddiary-schema.png)
 
-## Spring Security and Keycloak
+## 4. Spring Security and Keycloak
 `@Configuration`, `@EnableWebSecurity` - source of Spring Bean definitions on HTTP authentication, authorisation rules
 
 `@Bean` - define a Spring Bean (an object managed by Spring Inversion of Control container)
@@ -68,9 +68,9 @@ public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Excepti
 ```
 
 `User Account Management` - allow admins to create & manage user profiles, including storing of additional custom attributes ie. age
-![](src/main/resources/readme/list-of-users.png)
+![](src/main/resources/readme/user-profiles.png)
 ![](src/main/resources/readme/user-attributes-age.png)
 
 `User Session Management` - allow admins to view and manage a list of active user sessions\
 `Session cookies` - maintain user's state between the client browser and server during a user session
-![](src/main/resources/readme/user-session.png)
+![](src/main/resources/readme/user-sessions.png)
